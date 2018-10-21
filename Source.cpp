@@ -6,12 +6,15 @@ Purpose: To convert Celsius to Fahrenheit
 */
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
 int main() {
 	int lowTemp;
 	int highTemp;
+	int far;
+	int i;
 
 	cout << "Enter the low range number for Conversion: " << endl;
 	cin >> lowTemp;
@@ -31,11 +34,16 @@ int main() {
 		}
 	}
 
-
-	//convert from C to F
-
-	//output the values
-
+	i = lowTemp;
+	cout << "=====================" << endl;
+	cout << left;
+	cout << setw(5) << "Celsius" << setw(5) << "Fahrenheit" << endl;
+	while (i <= highTemp) 
+	{
+		far = 9 / 5 * i + 32;
+		cout << i << "    " <<  far << endl;
+		i = i + 1;
+	}
 
 	return 0;
 }
